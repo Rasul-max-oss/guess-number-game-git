@@ -1,5 +1,9 @@
-# game.py (версия Маши)
+# game.py (версия Пети)
 import random
+
+print("🎮 Добро пожаловать в игру 'Угадай число'!")
+print("Я загадал число от 1 до 10")
+
 
 print("🎮 Добро пожаловать в игру 'Угадай число'!")
 
@@ -24,10 +28,19 @@ secret = random.randint(1, max_num)
 while True:
     guess = int(input("Твоё предположение: "))
     
+    # ПЕТЯ ДОБАВИЛ ПОДСКАЗКИ:
+    diff = abs(guess - secret)
+    if diff <= 2:
+        print("🔥 ГОРЯЧО!")
+    elif diff <= 4:
+        print("😐 ТЕПЛО...")
+    else:
+        print("❄️ ХОЛОДНО!")
+    
     if guess < secret:
         print("❌ Мало!")
     elif guess > secret:
         print("❌ Много!")
-    else:
+    else:   
         print(f"✅ Угадал! Это было число {secret}")
         break
