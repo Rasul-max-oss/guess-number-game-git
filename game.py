@@ -6,7 +6,7 @@ secret = random.randint(1, 10)
 
 while True:
     guess = int(input("Твоё предположение: "))
-    
+    #Файл для Димы!!!
     if guess < secret:
         print("❌ Мало!")
     elif guess > secret:
